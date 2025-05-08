@@ -3,7 +3,7 @@ import { findProductById } from "./productData.mjs";
 
 export async function productDetails(productId) {
 
-    fetchProduct(productId){
+    fetchProduct(productId);{
 
     } const product = await findProductById(productId);
     if (product) {
