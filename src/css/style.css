@@ -21,6 +21,8 @@ body {
   font-family: var(--font-body);
   font-size: var(--font-base);
   color: var(--dark-grey);
+  background-color: var(--light-grey);
+  line-height: 1.5;
 }
 img {
   max-width: 100%;
