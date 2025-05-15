@@ -1,4 +1,5 @@
 import { getData } from "./productData.mjs";  
+import { renderListWithTemplate } from "./utils.mjs";
 
 productCardTemplate(product)
 function productCardTemplate(product) {
@@ -20,7 +21,7 @@ export default async function productList( productId, tents) {
     // once we have the product details we can render out the HTML
     console.log(product);
     
-    renderProductList(productCardTemplate, sel, product);
+    renderListWithTemplate(productCardTemplate, sel, product);
    
 
 }
