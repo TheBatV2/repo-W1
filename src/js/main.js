@@ -1,3 +1,3 @@
-import { productList } from "./productFiles.mjs";
+import  productList  from "./productFiles.mjs";
 
 productList(".product-list", "tents");
