@@ -33,7 +33,7 @@ export function renderListWithTemplate(
   parentElement,
   list,
   position = "afterbegin",
-  clear = true
+  clear = true,
 ) {
   if (clear) {
     parentElement.innerHTML = "";
@@ -48,7 +48,7 @@ export async function renderWithTemplate(
   data,
   callback,
   position = "afterbegin",
-  clear = true
+  clear = true,
 ) {
   if (clear) {
     parentElement.innerHTML = "";
@@ -81,4 +81,13 @@ export async function loadHeaderFooter() {
   const footerEl = document.querySelector("#main-footer");
   await renderWithTemplate(headerTemplateFn, headerEl);
   await renderWithTemplate(footerTemplateFn, footerEl);
+}
+
+export function alertMessage(message, scroll = true) {
+  const main = document.querySelector("main");
+  const alert = document.createElement("div");
+  alert.classList.add("alert");
+  alert.innerHTML = "<p>${message}</p>";
+  main.prepend(alert);
+  if (scroll) window.scrollTo(0, 0);
 }
