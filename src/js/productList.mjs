@@ -24,3 +24,13 @@ export default async function productList(selector, category) {
   renderListWithTemplate(productCardTemplate, el, products);
   document.querySelector(".title").innerHTML = category;
 }
+
+// Get the category from the URL
+const params = new URLSearchParams(window.location.search);
+const category = params.get("category");
+
+// Only run if category exists
+if (category) {
+  // Call productList with the selector for your product grid and the category
+  productList(".product-grid", category);
+}
