@@ -29,3 +29,28 @@ export async function checkout(payload) {
   };
   return await fetch(baseURL + "checkout/", options).then(convertToJson);
 }
+
+export async function loginRequest(creds) {
+  const resp = await fetch("http://server-nodejs.cit.byui.edu:3000/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(creds),
+  });
+  if (!resp.ok) {
+    throw new Error("Invalid login");
+  }
+  const data = await resp.json();
+  return data.token;
+}
+
+export async function getOrders(token) {
+  const resp = await fetch("http://server-nodejs.cit.byui.edu:3000/orders", {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  if (!resp.ok) {
+    throw new Error("Unable to fetch orders");
+  }
+  return await resp.json();
+}
