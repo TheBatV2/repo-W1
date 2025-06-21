@@ -301,18 +301,6 @@ button {
   margin-top: 0.7em;
 }
 
-ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  padding-left: 0;
-}
-ul li {
-  margin: 0 1.5em;
-  text-align: center;
-}
-
 .order-summary li {
   margin-bottom: 0.7em;
   display: flex;
