@@ -40,7 +40,9 @@ export async function loginRequest(creds) {
     throw new Error("Invalid login");
   }
   const data = await resp.json();
-  return data.token;
+  console.log("loginRequest response data:", data);
+
+  return data.accessToken;
 }
 
 export async function getOrders(token) {
