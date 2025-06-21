@@ -1,3 +1,7 @@
+export function alertMessage(message) {
+  alert(message);
+}
+
 // wrapper for querySelector...returns matching element
 export function qs(selector, parent = document) {
   return parent.querySelector(selector);
@@ -5,14 +9,20 @@ export function qs(selector, parent = document) {
 // or a more concise version if you are into that sort of thing:
 // export const qs = (selector, parent = document) => parent.querySelector(selector);
 
-// retrieve data from localstorage
-export function getLocalStorage(key) {
-  return JSON.parse(localStorage.getItem(key));
-}
 // save data to local storage
 export function setLocalStorage(key, data) {
-  localStorage.setItem(key, JSON.stringify(data));
+  localStorage.setItem(key, data);
 }
+
+// retrieve data from localstorage
+export function getLocalStorage(key) {
+  return localStorage.getItem(key);
+}
+
+export function removeLocalStorage(key) {
+  localStorage.removeItem(key);
+}
+
 // set a listener for both touchend and click
 export function setClick(selector, callback) {
   qs(selector).addEventListener("touchend", (event) => {
@@ -33,7 +43,7 @@ export function renderListWithTemplate(
   parentElement,
   list,
   position = "afterbegin",
-  clear = true
+  clear = true,
 ) {
   if (clear) {
     parentElement.innerHTML = "";
@@ -48,7 +58,7 @@ export async function renderWithTemplate(
   data,
   callback,
   position = "afterbegin",
-  clear = true
+  clear = true,
 ) {
   if (clear) {
     parentElement.innerHTML = "";
