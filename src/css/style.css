@@ -232,7 +232,6 @@ button {
   margin: 0.25em;
 }
 
-
 /* CHECKOUT STYLES */
 .checkout-card {
   background: #fff;
@@ -302,9 +301,16 @@ button {
   margin-top: 0.7em;
 }
 
-.order-summary ul {
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   list-style: none;
-  padding: 0;
+  padding-left: 0;
+}
+ul li {
+  margin: 0 1.5em;
+  text-align: center;
 }
 
 .order-summary li {
@@ -432,8 +438,6 @@ button {
   text-align: center;
   margin: 0;
 }
-
-
 
 @media screen and (min-width: 500px) {
   body {
