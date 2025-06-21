@@ -57,7 +57,3 @@ export async function getOrders(token) {
   }
   return await resp.json();
 }
-
-  return await fetch(baseURL + "/checkout/", options).then(convertToJson);
-}
-
