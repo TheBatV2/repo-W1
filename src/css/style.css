@@ -232,6 +232,7 @@ button {
   margin: 0.25em;
 }
 
+
 /* CHECKOUT STYLES */
 .checkout-card {
   background: #fff;
@@ -406,6 +407,33 @@ button {
   border-left: 3px solid #ffc163;
   padding-left: 1.5em;
 }
+=======
+/* Product grid: left to right, images square and smaller */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-grid img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 0.5rem auto;
+  border-radius: 8px; /* optional: rounded corners */
+}
+
+.product-grid h2 {
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+
 
 @media screen and (min-width: 500px) {
   body {
