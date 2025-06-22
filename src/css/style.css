@@ -139,6 +139,10 @@ button {
 .products {
   padding: 0.5em;
 }
+
+.products .product-grid li a h2 {
+  text-decoration: none;
+}
 .product_list {
   display: flex;
   flex-flow: row wrap;
