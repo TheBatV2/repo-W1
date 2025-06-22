@@ -1,4 +1,4 @@
-import { loadHeaderFooter, getParam } from "../js/utils.mjs";
+import { loadHeaderFooter, getParam } from "./utils.mjs";
 import { login } from "../auth/auth.mjs";
 
 loadHeaderFooter();
