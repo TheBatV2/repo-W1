@@ -1,4 +1,4 @@
-import { loginRequest } from "../js/externalServices.mjs";
+import { loginRequest } from "/js/externalServices.mjs";
 import {
   alertMessage,
   getLocalStorage,

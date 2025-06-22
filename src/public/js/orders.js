@@ -1,7 +1,7 @@
-import { loadHeaderFooter } from "../../js/utils.mjs";
-import { checkLogin } from "../../auth/auth.mjs";
-import { getOrders as getOrdersAPI } from "../../js/externalServices.mjs";
-import { setOrders, getOrders } from "../../js/currentOrders.mjs";
+import { loadHeaderFooter } from "/js/utils.mjs";
+import { checkLogin } from "/auth/auth.mjs";
+import { getOrders as getOrdersAPI } from "/js/externalServices.mjs";
+import { setOrders, getOrders } from "/js/currentOrders.mjs";
 
 loadHeaderFooter();
 const token = checkLogin();
