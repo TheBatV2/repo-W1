@@ -1,6 +1,6 @@
-import { loadHeaderFooter } from "../js/utils.mjs";
+import { loadHeaderFooter } from "./utils.mjs";
 import { checkLogin } from "../auth/auth.mjs";
-import { getOrders as getOrdersAPI } from "../js/externalServices.mjs";
+import { getOrders as getOrdersAPI } from "./externalServices.mjs";
 import { setOrders, getOrders } from "./currentOrders.mjs";
 
 loadHeaderFooter();
