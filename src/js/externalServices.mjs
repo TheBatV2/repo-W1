@@ -1,4 +1,5 @@
-const baseURL = import.meta.env.VITE_SERVER_URL;
+const baseURL =
+  import.meta.env?.VITE_SERVER_URL || "https://your-fallback-url.com";
 function convertToJson(res) {
   if (res.ok) {
     return res.json();
@@ -41,8 +42,6 @@ export async function loginRequest(creds) {
     throw new Error("Invalid login");
   }
   const data = await resp.json();
-  console.log("loginRequest response data:", data);
-
   return data.accessToken;
 }
 
